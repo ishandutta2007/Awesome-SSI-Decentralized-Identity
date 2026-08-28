@@ -14,41 +14,25 @@ This repository tracks notable **SaaS platforms** and **open-source projects** f
 Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
 ## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
 - [How to Contribute](#how-to-contribute)
 - [Disclaimer](#disclaimer)
 
 ## SaaS/Hosted Platforms
-- **[Dock Labs](https://www.dock.io/)**  
-  Verifiable credential platform with APIs for issuing, verifying, and building reusable identity and KYC use cases.
 
-- **[Affinidi](https://www.affinidi.com/)**  
-  Decentralized identity and data-sharing platform focused on developer tools and consent-based credential exchange.
-
-- **[Trinsic](https://trinsic.id/)**  
-  Developer platform for reusable identity and verifiable credentials — issue once, accept trusted credentials across products.
-
-- **[Sphereon](https://sphereon.com/)**  
-  SSI and verifiable data solutions for enterprises, including agents, wallets, and integration services.
-
-- **[Veramo (commercial / hosted options)](https://veramo.io/)**  
-  Hosted and enterprise offerings built on the open Veramo JavaScript framework for verifiable data.
-
-- **[Danube Tech](https://danubetech.com/)**  
-  Identity and SSI technology provider with products and services around DIDs, VCs, and related standards.
-
-- **[Validated ID](https://www.validatedid.com/)**  
-  Digital identity and electronic signature solutions with SSI and qualified trust service capabilities (EU-focused).
-
-- **[Lissi](https://www.lissi.id/)**  
-  SSI wallet and ecosystem components for holding and presenting verifiable credentials.
-
-- **[Credo (OpenWallet Foundation / commercial support)](https://credo.js.org/)**  
-  Commercial support and products around the open Credo TypeScript framework for SSI agents.
-
-- **[cheqd](https://cheqd.io/)**  
-  Identity network and tooling that supports payment rails between issuers, holders, and verifiers for credential exchange.
+| Platform / Product | Description & Focus | Starting Tier Price | Free Tier / Free Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Dock Labs (Truvera)](https://www.dock.io/)** | Turnkey verifiable credential platform & APIs for issuing, verifying, and building reusable identity and KYC workflows. | **$499 / month** (Build plan for PoC, pilot, and starter production) | **30-day free trial** with unlimited credential issuance & verification in test sandbox. |
+| **[Affinidi](https://www.affinidi.com/)** | Decentralized identity & consent-based data-sharing platform with developer SDKs and Login integration. | **$199 / month** (Developer / Pro tier with bundled Affinidi Credit packages) | **Free Essential Plan** (Forever free; starter allocation of Affinidi Credits and MAU allowance for testing). |
+| **[Trinsic](https://trinsic.id/)** | Reusable identity acceptance network & developer infrastructure for issuing and accepting trusted credentials. | **$99 / month** (Growth plan with 1,000 credential transactions included; or ~$1.50/verification) | **Free Developer Plan** (Forever free; up to 100 credentials/month with Mock Providers & Tester Network). |
+| **[Paradym (by Animo)](https://paradym.id/)** | Enterprise SSI platform built on Credo/Aries & OpenID4VC for issuing, requesting, and verifying verifiable credentials. | **€50 / month** (Builder plan including 2,000 transactions/month; €0.033 per extra transaction) | **Free Community Plan** (Forever free; 100 transactions/month with full OpenID4VC & AnonCreds support). |
+| **[Danube Tech (Godiddy)](https://godiddy.com/)** | Cloud SSI services providing Universal Resolver, Registrar, and DID/VC management infrastructure. | **€60 / month** (T1 tier including 2,000 transactions/month; €0.03 per extra transaction) | **Free Tier** (Forever free; max 10 requests/30 mins, 5 total testnet DID writes, 2 DIDs/month). |
+| **[cheqd Studio](https://cheqd.io/)** | SSI network tooling, payment rails, and developer APIs to monetize and exchange credentials and DIDs. | **~$2.00 / DID write** (Mainnet DID write ~$2.00, update ~$1.00, resources ~$0.10–$0.40 in $CHEQ token) | **Free Testnet Tier** (Forever free unlimited DID creation, registration, and credential writes on testnet). |
+| **[walt.id Enterprise](https://walt.id/)** | Enterprise-grade managed cloud & turnkey SSI infrastructure with high availability and SLA support. | **€2,500 / month** (Enterprise Managed Cloud/SaaS with clustering, multi-tenancy & enterprise support) | **Free Community Stack** (Forever free self-hosted open-source core with unlimited DIDs/VCs; 14-day cloud trial). |
+| **[Validated ID (VIDsigner)](https://www.validatedid.com/)** | Qualified trust service provider offering digital identity verification and eIDAS-compliant verifiable credentials. | **€20 / month per user** (Business plan including 5 advanced signature credits/month) | **14-day free trial** (Full Business tier features with 5 signature credits, no credit card required). |
+| **[Sphereon](https://sphereon.com/)** | Enterprise SSI and verifiable data exchange (VDX) platform, agent orchestration, and wallet SDKs. | **€500 / month** (Starter enterprise pilot & verifiable data exchange API package) | **Free Forever Wallet App & Demo Portal** (Unlimited credential storage in wallet apps and full access to sandbox demo). |
+| **[Lissi](https://www.lissi.id/)** | European Digital Identity (EUDI) Wallet connector and enterprise SSI interaction platform. | **€1,500 / month** (Starter Program pilot package for EUDI Wallet & eIDAS 2.0 integration) | **30-day interactive pilot trial** (Includes sandbox environment, test credentials, and SDK integration access). |
 
 ## Open-Source GitHub Projects
 - **[Veramo](https://github.com/decentralized-identity/veramo)**  
