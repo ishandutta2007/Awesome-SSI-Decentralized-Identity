@@ -71,7 +71,7 @@ The following table lists leading commercial and hosted SSI platforms, sorted by
 
 The following list contains prominent open-source repositories powering decentralized identity, sorted by **GitHub Star Count (Descending)**:
 
-| Repository / Project | Stars | Focus &amp; Core Capabilities |
+| Repository / Project | Github_Stars | Focus &amp; Core Capabilities |
 | :--- | :--- | :--- |
 | **[Hyperledger Indy Node](https://github.com/hyperledger/indy-node)** | [![GitHub stars](https://img.shields.io/github/stars/hyperledger/indy-node?style=social&color=white)](https://github.com/hyperledger/indy-node/stargazers) | Server codebase for decentralized, purpose-built distributed identity ledgers with privacy-by-design. |
 | **[Hyperledger Indy SDK](https://github.com/hyperledger/indy-sdk)** | [![GitHub stars](https://img.shields.io/github/stars/hyperledger/indy-sdk?style=social&color=white)](https://github.com/hyperledger/indy-sdk/stargazers) | Official client SDK for creating, managing, and interacting with self-sovereign digital identities and verifiable credentials. |
