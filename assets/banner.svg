@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Filter for neon glow -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.08); }
+    }
+    @keyframes orbitSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes floatUpDown {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes dashMove {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: 120; }
+    }
+    @keyframes textShimmer {
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4)); }
+      50% { filter: drop-shadow(0 0 22px rgba(192, 132, 252, 0.7)); }
+    }
+    .pulse-bg {
+      transform-origin: 960px 180px;
+      animation: pulseGlow 6s ease-in-out infinite;
+    }
+    .orbit-ring {
+      transform-origin: 960px 180px;
+      animation: orbitSpin 20s linear infinite;
+    }
+    .orbit-ring-rev {
+      transform-origin: 960px 180px;
+      animation: orbitSpin 28s linear infinite reverse;
+    }
+    .floating-logo {
+      animation: floatUpDown 4s ease-in-out infinite;
+    }
+    .animated-dash {
+      stroke-dasharray: 8 6;
+      animation: dashMove 4s linear infinite;
+    }
+    .shimmer-title {
+      animation: textShimmer 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background Rect -->
+  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Grid Background -->
+  <g opacity="0.07" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="360"/>
+    <line x1="300" y1="0" x2="300" y2="360"/>
+    <line x1="450" y1="0" x2="450" y2="360"/>
+    <line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="750" y1="0" x2="750" y2="360"/>
+    <line x1="900" y1="0" x2="900" y2="360"/>
+    <line x1="1050" y1="0" x2="1050" y2="360"/>
+  </g>
+
+  <!-- Glowing Aura behind Graphic -->
+  <circle cx="960" cy="180" r="160" fill="url(#glowEffect)" class="pulse-bg"/>
+
+  <!-- Interactive Graphic: Identity Shield & Decentralized Node Rings -->
+  <g class="orbit-ring">
+    <circle cx="960" cy="180" r="125" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.35" stroke-dasharray="10 8"/>
+    <circle cx="960" cy="55" r="7" fill="#38bdf8" filter="url(#neonGlow)"/>
+    <circle cx="960" cy="305" r="6" fill="#818cf8" filter="url(#neonGlow)"/>
+  </g>
+
+  <g class="orbit-ring-rev">
+    <circle cx="960" cy="180" r="95" fill="none" stroke="#c084fc" stroke-width="1.5" opacity="0.4" class="animated-dash"/>
+    <circle cx="865" cy="180" r="7" fill="#c084fc" filter="url(#neonGlow)"/>
+    <circle cx="1055" cy="180" r="6" fill="#38bdf8" filter="url(#neonGlow)"/>
+  </g>
+
+  <!-- Central Shield & Key Symbol -->
+  <g class="floating-logo" transform="translate(960, 180)">
+    <path d="M -42 -48 C 0 -62 0 -62 42 -48 C 42 22 28 62 0 82 C -28 62 -42 22 -42 -48 Z" 
+          fill="url(#shieldGrad)" opacity="0.88" filter="url(#softGlow)"/>
+    <path d="M -36 -42 C 0 -54 0 -54 36 -42 C 36 18 24 52 0 70 C -24 52 -36 18 -36 -42 Z" 
+          fill="#0f172a" stroke="url(#accentGrad)" stroke-width="2.5"/>
+
+    <circle cx="0" cy="-6" r="12" fill="url(#accentGrad)" filter="url(#neonGlow)"/>
+    <polygon points="-5,-4 5,-4 8,24 -8,24" fill="url(#accentGrad)"/>
+    <circle cx="0" cy="-6" r="5" fill="#0f172a"/>
+    <circle cx="0" cy="16" r="2.5" fill="#0f172a"/>
+  </g>
+
+  <!-- Left Content / Title Area -->
+  <g transform="translate(80, 0)">
+    <g transform="translate(0, 52)">
+      <rect width="260" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <circle cx="16" cy="15" r="4" fill="#38bdf8" filter="url(#neonGlow)"/>
+      <text x="30" y="19.5" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="1.2">DECENTRALIZED IDENTITY (SSI)</text>
+    </g>
+
+    <text x="0" y="142" fill="url(#accentGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-0.5" class="shimmer-title">
+      Awesome SSI &amp; DID
+    </text>
+
+    <text x="0" y="186" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="500">
+      Self-Sovereign Identity, Verifiable Credentials &amp; Wallets
+    </text>
+
+    <text x="0" y="218" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="400">
+      Curated ecosystem of SaaS platforms, developer SDKs, EUDI wallets &amp; open-source projects.
+    </text>
+
+    <g transform="translate(0, 260)">
+      <g transform="translate(0, 0)">
+        <rect width="90" height="28" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" opacity="0.85"/>
+        <text x="45" y="18" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">W3C DIDs</text>
+      </g>
+      <g transform="translate(100, 0)">
+        <rect width="165" height="28" rx="6" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" opacity="0.85"/>
+        <text x="82.5" y="18" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Verifiable Credentials</text>
+      </g>
+      <g transform="translate(275, 0)">
+        <rect width="125" height="28" rx="6" fill="#1e293b" stroke="#c084fc" stroke-width="1.2" opacity="0.85"/>
+        <text x="62.5" y="18" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">OpenID4VC / VCI</text>
+      </g>
+      <g transform="translate(410, 0)">
+        <rect width="115" height="28" rx="6" fill="#1e293b" stroke="#34d399" stroke-width="1.2" opacity="0.85"/>
+        <text x="57.5" y="18" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">EUDI &amp; eIDAS 2.0</text>
+      </g>
+      <g transform="translate(535, 0)">
+        <rect width="120" height="28" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" opacity="0.85"/>
+        <text x="60" y="18" fill="#fbbf24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">SD-JWT &amp; mDoc</text>
+      </g>
+    </g>
+  </g>
+
+  <rect x="0" y="356" width="1200" height="4" fill="url(#accentGrad)"/>
+</svg>
